@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2021-01-07T22:11:55.621921+00:00",
+  "timestamp": "2021-01-26T00:08:11.157774+00:00",
   "repo": "cfrg/draft-irtf-cfrg-hpke",
   "labels": [
     {
@@ -2310,6 +2310,22 @@
       "body": "OK, so I brought this up on the CFRG list and there were 2 people voicing some qualified support and no real opposition but then the topic just kind of died. I made a PR to show exactly what changes this would involve in the draft and it's been hanging there (by the way, the changes specified in the PR do not have all the test vector changes, but I will be happy to supply all of them if you agree to accept this PR but if you're going to reject this then there's no point). So allow me to raise this as an issue in the hope it elicits some discussion.\r\n\r\nThe NIST curves can be exchanged using \"compact representation\" per RFC 6090. That means just sending the x-coordinate. You don't even need to send a sign bit because the sign is not necessary since we're just doing Diffie-Hellman. This has the benefit of making Npk be the same as Nsk and Nsecret, just like the Bernstein curves. This makes the interface be a bit more uniform and cuts down on extraneous formatting (pre-pending with a 04, for instance). \r\n\r\nIn my implementation supporting compact representation I just do the equation of the curve and take the square root to get a y-coordinate (again, sign is irrelevant) in order to do the group operation. On the CFRG list Mike Hamburg mentioned that it's possible to do the x-only Montgomery ladder so even recovering y is not strictly necessary. \r\n\r\nI understand that there's no requirement on how one sends blobs of bits from one party to another and it's possible to do HPKE, get enc in the form of 04..x..y and then rip out x and send it to the other party who would, presumably reconstruct the 04..x..<either y> in order to pass it into HPKE but that's just horrible. The 04..x..y thing is a SECG-defined representation but there's really no reason to abide by that, especially when the 04 and the y-coordinate aren't needed.\r\n\r\nPlease consider accepting this PR. I'll be happy to finish the test vectors if you do.\r\n",
       "createdAt": "2020-12-10T23:45:51Z",
       "updatedAt": "2020-12-10T23:45:51Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 202,
+      "id": "MDU6SXNzdWU3OTMxMDg2MDE=",
+      "title": "Prohibit the use of asymmetric keys with multiple KEMs",
+      "url": "https://github.com/cfrg/draft-irtf-cfrg-hpke/issues/202",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "It is going to be commonplace that a key pair will be used with multiple KDF or AEAD algorithms.  See ECH for an example.  \r\n\r\nThe design would seem to be robust against use in this way as the KEM ID is integrated into the label construction.  However, it would make usage much less prone to mistakes if the asymmetric key pairs were not usable with other KEMs.\r\n\r\nThis is not a design change, but a request to add text saying \"MUST NOT\" which would make writing specifications that depend on HPKE easier.\r\n\r\n",
+      "createdAt": "2021-01-25T07:17:30Z",
+      "updatedAt": "2021-01-25T07:17:30Z",
       "closedAt": null,
       "comments": []
     }
@@ -15028,6 +15044,62 @@
           "updatedAt": "2021-01-07T22:10:52Z"
         }
       ],
+      "reviews": []
+    },
+    {
+      "number": 201,
+      "id": "MDExOlB1bGxSZXF1ZXN0NTUxNTQ4NDI0",
+      "title": "Update hpke-rs compatibility",
+      "url": "https://github.com/cfrg/draft-irtf-cfrg-hpke/pull/201",
+      "state": "MERGED",
+      "author": "franziskuskiefer",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "I guess I should update the version here as well. ",
+      "createdAt": "2021-01-08T06:54:52Z",
+      "updatedAt": "2021-01-25T15:08:38Z",
+      "baseRepository": "cfrg/draft-irtf-cfrg-hpke",
+      "baseRefName": "master",
+      "baseRefOid": "65b994a98ba729ed8c6b80ca96e0fe85006f3ab0",
+      "headRepository": "franziskuskiefer/draft-irtf-cfrg-hpke",
+      "headRefName": "patch-2",
+      "headRefOid": "50f46c3df25f702930580dd2fa7d9ee95ff80b4d",
+      "closedAt": "2021-01-25T15:08:38Z",
+      "mergedAt": "2021-01-25T15:08:38Z",
+      "mergedBy": "chris-wood",
+      "mergeCommit": {
+        "oid": "753a010c04b1adfc1671e140ad87661393fc1d5b"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 203,
+      "id": "MDExOlB1bGxSZXF1ZXN0NTYxNDM4NTg3",
+      "title": "NSS does -07 as of today",
+      "url": "https://github.com/cfrg/draft-irtf-cfrg-hpke/pull/203",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2021-01-26T00:02:52Z",
+      "updatedAt": "2021-01-26T00:07:30Z",
+      "baseRepository": "cfrg/draft-irtf-cfrg-hpke",
+      "baseRefName": "master",
+      "baseRefOid": "753a010c04b1adfc1671e140ad87661393fc1d5b",
+      "headRepository": "martinthomson/draft-irtf-cfrg-hpke",
+      "headRefName": "patch-1",
+      "headRefOid": "9afc3fce7cb8378f5e3bb9c6f100b3eda8103728",
+      "closedAt": "2021-01-26T00:07:29Z",
+      "mergedAt": "2021-01-26T00:07:29Z",
+      "mergedBy": "chris-wood",
+      "mergeCommit": {
+        "oid": "0373bd8afe75a9c92cabbc37db87031041721b0b"
+      },
+      "comments": [],
       "reviews": []
     }
   ]
