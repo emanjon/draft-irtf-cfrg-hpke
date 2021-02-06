@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2021-01-26T00:08:11.157774+00:00",
+  "timestamp": "2021-02-06T23:10:09.287546+00:00",
   "repo": "cfrg/draft-irtf-cfrg-hpke",
   "labels": [
     {
@@ -15099,6 +15099,32 @@
       "mergeCommit": {
         "oid": "0373bd8afe75a9c92cabbc37db87031041721b0b"
       },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 204,
+      "id": "MDExOlB1bGxSZXF1ZXN0NTY4ODY2ODA5",
+      "title": "Fix the version string. Apply other editorial suggestions from Colin.",
+      "url": "https://github.com/cfrg/draft-irtf-cfrg-hpke/pull/204",
+      "state": "OPEN",
+      "author": "chris-wood",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This breaks draft version and test vector coupling, which is problematic for protocols and implementations tracking updates to this draft. Given the maturity of this draft, we now is an appropriate time to break this dependency. No wire format changes will be made going forward (of course absent analysis that suggests the need for changes).\r\n\r\ncc @blipp ",
+      "createdAt": "2021-02-06T23:09:03Z",
+      "updatedAt": "2021-02-06T23:09:03Z",
+      "baseRepository": "cfrg/draft-irtf-cfrg-hpke",
+      "baseRefName": "master",
+      "baseRefOid": "0373bd8afe75a9c92cabbc37db87031041721b0b",
+      "headRepository": "cfrg/draft-irtf-cfrg-hpke",
+      "headRefName": "caw/editor-prep",
+      "headRefOid": "2593c31fe42c0a9a87b0f1e611a3c2d2536397fa",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
       "comments": [],
       "reviews": []
     }
