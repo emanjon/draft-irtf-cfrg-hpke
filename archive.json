@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2021-02-06T23:10:09.287546+00:00",
+  "timestamp": "2021-02-09T13:30:31.399302+00:00",
   "repo": "cfrg/draft-irtf-cfrg-hpke",
   "labels": [
     {
@@ -15114,19 +15114,52 @@
       "labels": [],
       "body": "This breaks draft version and test vector coupling, which is problematic for protocols and implementations tracking updates to this draft. Given the maturity of this draft, we now is an appropriate time to break this dependency. No wire format changes will be made going forward (of course absent analysis that suggests the need for changes).\r\n\r\ncc @blipp ",
       "createdAt": "2021-02-06T23:09:03Z",
-      "updatedAt": "2021-02-06T23:09:03Z",
+      "updatedAt": "2021-02-09T13:29:07Z",
       "baseRepository": "cfrg/draft-irtf-cfrg-hpke",
       "baseRefName": "master",
       "baseRefOid": "0373bd8afe75a9c92cabbc37db87031041721b0b",
       "headRepository": "cfrg/draft-irtf-cfrg-hpke",
       "headRefName": "caw/editor-prep",
-      "headRefOid": "2593c31fe42c0a9a87b0f1e611a3c2d2536397fa",
+      "headRefOid": "b4f4d08a2648266d0f2d1d0d0cc2590414b24311",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NTg2NTI3ODQ0",
+          "commit": {
+            "abbreviatedOid": "2593c31"
+          },
+          "author": "blipp",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "Looks good to me overall! See three comments below. ",
+          "createdAt": "2021-02-09T13:12:29Z",
+          "updatedAt": "2021-02-09T13:27:51Z",
+          "comments": [
+            {
+              "originalPosition": 118,
+              "body": "```suggestion\r\n  the private key `skX` and public key `pkY` to produce a Diffie-Hellman shared secret of\r\n```\r\nThe Diffie-Hellman was deleted in front of shared secret, was this on purpose? At other occurrences we seem to carefully distinguish between \u201cDiffie-Hellman shared secret\u201d and \u201cKEM shared secret\u201d, so it seems good to do it here, too.",
+              "createdAt": "2021-02-09T13:17:17Z",
+              "updatedAt": "2021-02-09T13:29:07Z"
+            },
+            {
+              "originalPosition": 142,
+              "body": "I like how the proposal reduced text repetition. One nit:\r\n\r\nIn the pseudo-code we still use `Serialize` and `Deserialize`, that are no longer defined. Switch to `SerializePublicKey()` and `DeserializePublicKey()` in the pseudo-code?",
+              "createdAt": "2021-02-09T13:18:42Z",
+              "updatedAt": "2021-02-09T13:29:07Z"
+            },
+            {
+              "originalPosition": 19,
+              "body": "```suggestion\r\n- `OS2IP(x)`: Convert byte string `x` to a non-negative integer as\r\n  described in {{!RFC8017}}, assuming big-endian byte order.\r\n```\r\nMention big-endian also for OS2IP?",
+              "createdAt": "2021-02-09T13:23:33Z",
+              "updatedAt": "2021-02-09T13:29:07Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
