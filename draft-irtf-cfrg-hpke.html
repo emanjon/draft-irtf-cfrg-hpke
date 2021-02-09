@@ -26,21 +26,21 @@ HKDF, and SHA2.
 <meta content="draft-irtf-cfrg-hpke-latest" name="ietf.draft">
 <!-- Generator version information:
   xml2rfc 3.5.0
-    Python 3.8.5
+    Python 3.8.7
     appdirs 1.4.4
     ConfigArgParse 1.2.3
     google-i18n-address 2.4.0
     html5lib 1.1
-    intervaltree 3.0.2
+    intervaltree 3.1.0
     Jinja2 2.11.2
     kitchen 1.2.6
-    lxml 4.5.0
-    pycountry 19.8.18
-    pyflakes 2.1.1
+    lxml 4.6.2
+    pycountry 20.7.3
+    pyflakes 2.2.0
     PyYAML 5.4.1
-    requests 2.22.0
-    setuptools 45.2.0
-    six 1.14.0
+    requests 2.25.1
+    setuptools 51.3.3
+    six 1.15.0
 -->
 <link href="draft-irtf-cfrg-hpke.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -830,11 +830,11 @@ address div.right {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">HPKE</td>
-<td class="right">January 2021</td>
+<td class="right">February 2021</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Barnes, et al.</td>
-<td class="center">Expires 30 July 2021</td>
+<td class="center">Expires 13 August 2021</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -847,12 +847,12 @@ address div.right {
 <dd class="internet-draft">draft-irtf-cfrg-hpke-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2021-01-26" class="published">26 January 2021</time>
+<time datetime="2021-02-09" class="published">9 February 2021</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2021-07-30">30 July 2021</time></dd>
+<dd class="expires"><time datetime="2021-08-13">13 August 2021</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -907,7 +907,7 @@ HKDF, and SHA2.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 30 July 2021.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 13 August 2021.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -935,303 +935,303 @@ HKDF, and SHA2.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
         <a href="#" onclick="scroll(0,0)" class="toplink">▲</a><h2 id="name-table-of-contents">
 <a href="#name-table-of-contents" class="section-name selfRef">Table of Contents</a>
         </h2>
-<nav class="toc"><ul class="ulEmpty toc compact">
-<li class="ulEmpty toc compact" id="section-toc.1-1.1">
+<nav class="toc"><ul class="toc compact ulEmpty">
+<li class="toc compact ulEmpty" id="section-toc.1-1.1">
             <p id="section-toc.1-1.1.1" class="keepWithNext"><a href="#section-1" class="xref">1</a>.  <a href="#name-introduction" class="xref">Introduction</a><a href="#section-toc.1-1.1.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="ulEmpty toc compact" id="section-toc.1-1.2">
+          <li class="toc compact ulEmpty" id="section-toc.1-1.2">
             <p id="section-toc.1-1.2.1" class="keepWithNext"><a href="#section-2" class="xref">2</a>.  <a href="#name-requirements-notation" class="xref">Requirements Notation</a><a href="#section-toc.1-1.2.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="ulEmpty toc compact" id="section-toc.1-1.3">
+          <li class="toc compact ulEmpty" id="section-toc.1-1.3">
             <p id="section-toc.1-1.3.1" class="keepWithNext"><a href="#section-3" class="xref">3</a>.  <a href="#name-notation" class="xref">Notation</a><a href="#section-toc.1-1.3.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="ulEmpty toc compact" id="section-toc.1-1.4">
+          <li class="toc compact ulEmpty" id="section-toc.1-1.4">
             <p id="section-toc.1-1.4.1"><a href="#section-4" class="xref">4</a>.  <a href="#name-cryptographic-dependencies" class="xref">Cryptographic Dependencies</a><a href="#section-toc.1-1.4.1" class="pilcrow">¶</a></p>
-<ul class="ulEmpty toc compact">
-<li class="ulEmpty toc compact" id="section-toc.1-1.4.2.1">
+<ul class="toc compact ulEmpty">
+<li class="toc compact ulEmpty" id="section-toc.1-1.4.2.1">
                 <p id="section-toc.1-1.4.2.1.1"><a href="#section-4.1" class="xref">4.1</a>.  <a href="#name-dh-based-kem" class="xref">DH-Based KEM</a><a href="#section-toc.1-1.4.2.1.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
-          <li class="ulEmpty toc compact" id="section-toc.1-1.5">
+          <li class="toc compact ulEmpty" id="section-toc.1-1.5">
             <p id="section-toc.1-1.5.1"><a href="#section-5" class="xref">5</a>.  <a href="#name-hybrid-public-key-encryptio" class="xref">Hybrid Public Key Encryption</a><a href="#section-toc.1-1.5.1" class="pilcrow">¶</a></p>
-<ul class="ulEmpty toc compact">
-<li class="ulEmpty toc compact" id="section-toc.1-1.5.2.1">
+<ul class="toc compact ulEmpty">
+<li class="toc compact ulEmpty" id="section-toc.1-1.5.2.1">
                 <p id="section-toc.1-1.5.2.1.1"><a href="#section-5.1" class="xref">5.1</a>.  <a href="#name-creating-the-encryption-con" class="xref">Creating the Encryption Context</a><a href="#section-toc.1-1.5.2.1.1" class="pilcrow">¶</a></p>
-<ul class="ulEmpty toc compact">
-<li class="ulEmpty toc compact" id="section-toc.1-1.5.2.1.2.1">
+<ul class="toc compact ulEmpty">
+<li class="toc compact ulEmpty" id="section-toc.1-1.5.2.1.2.1">
                     <p id="section-toc.1-1.5.2.1.2.1.1"><a href="#section-5.1.1" class="xref">5.1.1</a>.  <a href="#name-encryption-to-a-public-key" class="xref">Encryption to a Public Key</a><a href="#section-toc.1-1.5.2.1.2.1.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.5.2.1.2.2">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.5.2.1.2.2">
                     <p id="section-toc.1-1.5.2.1.2.2.1"><a href="#section-5.1.2" class="xref">5.1.2</a>.  <a href="#name-authentication-using-a-pre-" class="xref">Authentication using a Pre-Shared Key</a><a href="#section-toc.1-1.5.2.1.2.2.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.5.2.1.2.3">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.5.2.1.2.3">
                     <p id="section-toc.1-1.5.2.1.2.3.1"><a href="#section-5.1.3" class="xref">5.1.3</a>.  <a href="#name-authentication-using-an-asy" class="xref">Authentication using an Asymmetric Key</a><a href="#section-toc.1-1.5.2.1.2.3.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.5.2.1.2.4">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.5.2.1.2.4">
                     <p id="section-toc.1-1.5.2.1.2.4.1"><a href="#section-5.1.4" class="xref">5.1.4</a>.  <a href="#name-authentication-using-both-a" class="xref">Authentication using both a PSK and an Asymmetric Key</a><a href="#section-toc.1-1.5.2.1.2.4.1" class="pilcrow">¶</a></p>
 </li>
                 </ul>
 </li>
-              <li class="ulEmpty toc compact" id="section-toc.1-1.5.2.2">
+              <li class="toc compact ulEmpty" id="section-toc.1-1.5.2.2">
                 <p id="section-toc.1-1.5.2.2.1"><a href="#section-5.2" class="xref">5.2</a>.  <a href="#name-encryption-and-decryption" class="xref">Encryption and Decryption</a><a href="#section-toc.1-1.5.2.2.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="ulEmpty toc compact" id="section-toc.1-1.5.2.3">
+              <li class="toc compact ulEmpty" id="section-toc.1-1.5.2.3">
                 <p id="section-toc.1-1.5.2.3.1"><a href="#section-5.3" class="xref">5.3</a>.  <a href="#name-secret-export" class="xref">Secret Export</a><a href="#section-toc.1-1.5.2.3.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
-          <li class="ulEmpty toc compact" id="section-toc.1-1.6">
+          <li class="toc compact ulEmpty" id="section-toc.1-1.6">
             <p id="section-toc.1-1.6.1"><a href="#section-6" class="xref">6</a>.  <a href="#name-single-shot-apis" class="xref">Single-Shot APIs</a><a href="#section-toc.1-1.6.1" class="pilcrow">¶</a></p>
-<ul class="ulEmpty toc compact">
-<li class="ulEmpty toc compact" id="section-toc.1-1.6.2.1">
+<ul class="toc compact ulEmpty">
+<li class="toc compact ulEmpty" id="section-toc.1-1.6.2.1">
                 <p id="section-toc.1-1.6.2.1.1"><a href="#section-6.1" class="xref">6.1</a>.  <a href="#name-encryption-and-decryption-2" class="xref">Encryption and Decryption</a><a href="#section-toc.1-1.6.2.1.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="ulEmpty toc compact" id="section-toc.1-1.6.2.2">
+              <li class="toc compact ulEmpty" id="section-toc.1-1.6.2.2">
                 <p id="section-toc.1-1.6.2.2.1"><a href="#section-6.2" class="xref">6.2</a>.  <a href="#name-secret-export-2" class="xref">Secret Export</a><a href="#section-toc.1-1.6.2.2.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
-          <li class="ulEmpty toc compact" id="section-toc.1-1.7">
+          <li class="toc compact ulEmpty" id="section-toc.1-1.7">
             <p id="section-toc.1-1.7.1"><a href="#section-7" class="xref">7</a>.  <a href="#name-algorithm-identifiers" class="xref">Algorithm Identifiers</a><a href="#section-toc.1-1.7.1" class="pilcrow">¶</a></p>
-<ul class="ulEmpty toc compact">
-<li class="ulEmpty toc compact" id="section-toc.1-1.7.2.1">
+<ul class="toc compact ulEmpty">
+<li class="toc compact ulEmpty" id="section-toc.1-1.7.2.1">
                 <p id="section-toc.1-1.7.2.1.1"><a href="#section-7.1" class="xref">7.1</a>.  <a href="#name-key-encapsulation-mechanism" class="xref">Key Encapsulation Mechanisms (KEMs)</a><a href="#section-toc.1-1.7.2.1.1" class="pilcrow">¶</a></p>
-<ul class="ulEmpty toc compact">
-<li class="ulEmpty toc compact" id="section-toc.1-1.7.2.1.2.1">
+<ul class="toc compact ulEmpty">
+<li class="toc compact ulEmpty" id="section-toc.1-1.7.2.1.2.1">
                     <p id="section-toc.1-1.7.2.1.2.1.1"><a href="#section-7.1.1" class="xref">7.1.1</a>.  <a href="#name-serializepublickey-and-dese" class="xref">SerializePublicKey and DeserializePublicKey</a><a href="#section-toc.1-1.7.2.1.2.1.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.7.2.1.2.2">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.7.2.1.2.2">
                     <p id="section-toc.1-1.7.2.1.2.2.1"><a href="#section-7.1.2" class="xref">7.1.2</a>.  <a href="#name-serializeprivatekey-and-des" class="xref">SerializePrivateKey and DeserializePrivateKey</a><a href="#section-toc.1-1.7.2.1.2.2.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.7.2.1.2.3">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.7.2.1.2.3">
                     <p id="section-toc.1-1.7.2.1.2.3.1"><a href="#section-7.1.3" class="xref">7.1.3</a>.  <a href="#name-derivekeypair" class="xref">DeriveKeyPair</a><a href="#section-toc.1-1.7.2.1.2.3.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.7.2.1.2.4">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.7.2.1.2.4">
                     <p id="section-toc.1-1.7.2.1.2.4.1"><a href="#section-7.1.4" class="xref">7.1.4</a>.  <a href="#name-validation-of-inputs-and-ou" class="xref">Validation of Inputs and Outputs</a><a href="#section-toc.1-1.7.2.1.2.4.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.7.2.1.2.5">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.7.2.1.2.5">
                     <p id="section-toc.1-1.7.2.1.2.5.1"><a href="#section-7.1.5" class="xref">7.1.5</a>.  <a href="#name-future-kems" class="xref">Future KEMs</a><a href="#section-toc.1-1.7.2.1.2.5.1" class="pilcrow">¶</a></p>
 </li>
                 </ul>
 </li>
-              <li class="ulEmpty toc compact" id="section-toc.1-1.7.2.2">
+              <li class="toc compact ulEmpty" id="section-toc.1-1.7.2.2">
                 <p id="section-toc.1-1.7.2.2.1"><a href="#section-7.2" class="xref">7.2</a>.  <a href="#name-key-derivation-functions-kd" class="xref">Key Derivation Functions (KDFs)</a><a href="#section-toc.1-1.7.2.2.1" class="pilcrow">¶</a></p>
-<ul class="ulEmpty toc compact">
-<li class="ulEmpty toc compact" id="section-toc.1-1.7.2.2.2.1">
+<ul class="toc compact ulEmpty">
+<li class="toc compact ulEmpty" id="section-toc.1-1.7.2.2.2.1">
                     <p id="section-toc.1-1.7.2.2.2.1.1"><a href="#section-7.2.1" class="xref">7.2.1</a>.  <a href="#name-input-length-restrictions" class="xref">Input Length Restrictions</a><a href="#section-toc.1-1.7.2.2.2.1.1" class="pilcrow">¶</a></p>
 </li>
                 </ul>
 </li>
-              <li class="ulEmpty toc compact" id="section-toc.1-1.7.2.3">
+              <li class="toc compact ulEmpty" id="section-toc.1-1.7.2.3">
                 <p id="section-toc.1-1.7.2.3.1"><a href="#section-7.3" class="xref">7.3</a>.  <a href="#name-authenticated-encryption-wi" class="xref">Authenticated Encryption with Associated Data (AEAD) Functions</a><a href="#section-toc.1-1.7.2.3.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
-          <li class="ulEmpty toc compact" id="section-toc.1-1.8">
+          <li class="toc compact ulEmpty" id="section-toc.1-1.8">
             <p id="section-toc.1-1.8.1"><a href="#section-8" class="xref">8</a>.  <a href="#name-security-considerations" class="xref">Security Considerations</a><a href="#section-toc.1-1.8.1" class="pilcrow">¶</a></p>
-<ul class="ulEmpty toc compact">
-<li class="ulEmpty toc compact" id="section-toc.1-1.8.2.1">
+<ul class="toc compact ulEmpty">
+<li class="toc compact ulEmpty" id="section-toc.1-1.8.2.1">
                 <p id="section-toc.1-1.8.2.1.1"><a href="#section-8.1" class="xref">8.1</a>.  <a href="#name-security-properties" class="xref">Security Properties</a><a href="#section-toc.1-1.8.2.1.1" class="pilcrow">¶</a></p>
-<ul class="ulEmpty toc compact">
-<li class="ulEmpty toc compact" id="section-toc.1-1.8.2.1.2.1">
+<ul class="toc compact ulEmpty">
+<li class="toc compact ulEmpty" id="section-toc.1-1.8.2.1.2.1">
                     <p id="section-toc.1-1.8.2.1.2.1.1"><a href="#section-8.1.1" class="xref">8.1.1</a>.  <a href="#name-key-compromise-impersonatio" class="xref">Key-Compromise Impersonation</a><a href="#section-toc.1-1.8.2.1.2.1.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.8.2.1.2.2">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.8.2.1.2.2">
                     <p id="section-toc.1-1.8.2.1.2.2.1"><a href="#section-8.1.2" class="xref">8.1.2</a>.  <a href="#name-computational-analysis" class="xref">Computational Analysis</a><a href="#section-toc.1-1.8.2.1.2.2.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.8.2.1.2.3">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.8.2.1.2.3">
                     <p id="section-toc.1-1.8.2.1.2.3.1"><a href="#section-8.1.3" class="xref">8.1.3</a>.  <a href="#name-post-quantum-security" class="xref">Post-Quantum Security</a><a href="#section-toc.1-1.8.2.1.2.3.1" class="pilcrow">¶</a></p>
 </li>
                 </ul>
 </li>
-              <li class="ulEmpty toc compact" id="section-toc.1-1.8.2.2">
+              <li class="toc compact ulEmpty" id="section-toc.1-1.8.2.2">
                 <p id="section-toc.1-1.8.2.2.1"><a href="#section-8.2" class="xref">8.2</a>.  <a href="#name-security-requirements-on-a-" class="xref">Security Requirements on a KEM used within HPKE</a><a href="#section-toc.1-1.8.2.2.1" class="pilcrow">¶</a></p>
-<ul class="ulEmpty toc compact">
-<li class="ulEmpty toc compact" id="section-toc.1-1.8.2.2.2.1">
+<ul class="toc compact ulEmpty">
+<li class="toc compact ulEmpty" id="section-toc.1-1.8.2.2.2.1">
                     <p id="section-toc.1-1.8.2.2.2.1.1"><a href="#section-8.2.1" class="xref">8.2.1</a>.  <a href="#name-encap-decap-interface" class="xref">Encap/Decap Interface</a><a href="#section-toc.1-1.8.2.2.2.1.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.8.2.2.2.2">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.8.2.2.2.2">
                     <p id="section-toc.1-1.8.2.2.2.2.1"><a href="#section-8.2.2" class="xref">8.2.2</a>.  <a href="#name-authencap-authdecap-interfa" class="xref">AuthEncap/AuthDecap Interface</a><a href="#section-toc.1-1.8.2.2.2.2.1" class="pilcrow">¶</a></p>
 </li>
                 </ul>
 </li>
-              <li class="ulEmpty toc compact" id="section-toc.1-1.8.2.3">
+              <li class="toc compact ulEmpty" id="section-toc.1-1.8.2.3">
                 <p id="section-toc.1-1.8.2.3.1"><a href="#section-8.3" class="xref">8.3</a>.  <a href="#name-security-requirements-on-a-k" class="xref">Security Requirements on a KDF</a><a href="#section-toc.1-1.8.2.3.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="ulEmpty toc compact" id="section-toc.1-1.8.2.4">
+              <li class="toc compact ulEmpty" id="section-toc.1-1.8.2.4">
                 <p id="section-toc.1-1.8.2.4.1"><a href="#section-8.4" class="xref">8.4</a>.  <a href="#name-pre-shared-key-recommendati" class="xref">Pre-Shared Key Recommendations</a><a href="#section-toc.1-1.8.2.4.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="ulEmpty toc compact" id="section-toc.1-1.8.2.5">
+              <li class="toc compact ulEmpty" id="section-toc.1-1.8.2.5">
                 <p id="section-toc.1-1.8.2.5.1"><a href="#section-8.5" class="xref">8.5</a>.  <a href="#name-domain-separation" class="xref">Domain Separation</a><a href="#section-toc.1-1.8.2.5.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="ulEmpty toc compact" id="section-toc.1-1.8.2.6">
+              <li class="toc compact ulEmpty" id="section-toc.1-1.8.2.6">
                 <p id="section-toc.1-1.8.2.6.1"><a href="#section-8.6" class="xref">8.6</a>.  <a href="#name-external-requirements-non-g" class="xref">External Requirements / Non-Goals</a><a href="#section-toc.1-1.8.2.6.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="ulEmpty toc compact" id="section-toc.1-1.8.2.7">
+              <li class="toc compact ulEmpty" id="section-toc.1-1.8.2.7">
                 <p id="section-toc.1-1.8.2.7.1"><a href="#section-8.7" class="xref">8.7</a>.  <a href="#name-bidirectional-encryption" class="xref">Bidirectional Encryption</a><a href="#section-toc.1-1.8.2.7.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="ulEmpty toc compact" id="section-toc.1-1.8.2.8">
+              <li class="toc compact ulEmpty" id="section-toc.1-1.8.2.8">
                 <p id="section-toc.1-1.8.2.8.1"><a href="#section-8.8" class="xref">8.8</a>.  <a href="#name-metadata-protection" class="xref">Metadata Protection</a><a href="#section-toc.1-1.8.2.8.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
-          <li class="ulEmpty toc compact" id="section-toc.1-1.9">
+          <li class="toc compact ulEmpty" id="section-toc.1-1.9">
             <p id="section-toc.1-1.9.1"><a href="#section-9" class="xref">9</a>.  <a href="#name-message-encoding" class="xref">Message Encoding</a><a href="#section-toc.1-1.9.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="ulEmpty toc compact" id="section-toc.1-1.10">
+          <li class="toc compact ulEmpty" id="section-toc.1-1.10">
             <p id="section-toc.1-1.10.1"><a href="#section-10" class="xref">10</a>. <a href="#name-iana-considerations" class="xref">IANA Considerations</a><a href="#section-toc.1-1.10.1" class="pilcrow">¶</a></p>
-<ul class="ulEmpty toc compact">
-<li class="ulEmpty toc compact" id="section-toc.1-1.10.2.1">
+<ul class="toc compact ulEmpty">
+<li class="toc compact ulEmpty" id="section-toc.1-1.10.2.1">
                 <p id="section-toc.1-1.10.2.1.1"><a href="#section-10.1" class="xref">10.1</a>.  <a href="#name-kem-identifiers" class="xref">KEM Identifiers</a><a href="#section-toc.1-1.10.2.1.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="ulEmpty toc compact" id="section-toc.1-1.10.2.2">
+              <li class="toc compact ulEmpty" id="section-toc.1-1.10.2.2">
                 <p id="section-toc.1-1.10.2.2.1"><a href="#section-10.2" class="xref">10.2</a>.  <a href="#name-kdf-identifiers" class="xref">KDF Identifiers</a><a href="#section-toc.1-1.10.2.2.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="ulEmpty toc compact" id="section-toc.1-1.10.2.3">
+              <li class="toc compact ulEmpty" id="section-toc.1-1.10.2.3">
                 <p id="section-toc.1-1.10.2.3.1"><a href="#section-10.3" class="xref">10.3</a>.  <a href="#name-aead-identifiers" class="xref">AEAD Identifiers</a><a href="#section-toc.1-1.10.2.3.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
-          <li class="ulEmpty toc compact" id="section-toc.1-1.11">
+          <li class="toc compact ulEmpty" id="section-toc.1-1.11">
             <p id="section-toc.1-1.11.1"><a href="#section-11" class="xref">11</a>. <a href="#name-acknowledgements" class="xref">Acknowledgements</a><a href="#section-toc.1-1.11.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="ulEmpty toc compact" id="section-toc.1-1.12">
+          <li class="toc compact ulEmpty" id="section-toc.1-1.12">
             <p id="section-toc.1-1.12.1"><a href="#section-12" class="xref">12</a>. <a href="#name-references" class="xref">References</a><a href="#section-toc.1-1.12.1" class="pilcrow">¶</a></p>
-<ul class="ulEmpty toc compact">
-<li class="ulEmpty toc compact" id="section-toc.1-1.12.2.1">
+<ul class="toc compact ulEmpty">
+<li class="toc compact ulEmpty" id="section-toc.1-1.12.2.1">
                 <p id="section-toc.1-1.12.2.1.1"><a href="#section-12.1" class="xref">12.1</a>.  <a href="#name-normative-references" class="xref">Normative References</a><a href="#section-toc.1-1.12.2.1.1" class="pilcrow">¶</a></p>
 </li>
-              <li class="ulEmpty toc compact" id="section-toc.1-1.12.2.2">
+              <li class="toc compact ulEmpty" id="section-toc.1-1.12.2.2">
                 <p id="section-toc.1-1.12.2.2.1"><a href="#section-12.2" class="xref">12.2</a>.  <a href="#name-informative-references" class="xref">Informative References</a><a href="#section-toc.1-1.12.2.2.1" class="pilcrow">¶</a></p>
 </li>
             </ul>
 </li>
-          <li class="ulEmpty toc compact" id="section-toc.1-1.13">
+          <li class="toc compact ulEmpty" id="section-toc.1-1.13">
             <p id="section-toc.1-1.13.1"><a href="#section-appendix.a" class="xref">Appendix A</a>.  <a href="#name-test-vectors" class="xref">Test Vectors</a><a href="#section-toc.1-1.13.1" class="pilcrow">¶</a></p>
-<ul class="ulEmpty toc compact">
-<li class="ulEmpty toc compact" id="section-toc.1-1.13.2.1">
+<ul class="toc compact ulEmpty">
+<li class="toc compact ulEmpty" id="section-toc.1-1.13.2.1">
                 <p id="section-toc.1-1.13.2.1.1"><a href="#section-a.1" class="xref">A.1</a>.  <a href="#name-dhkemx25519-hkdf-sha256-hkd" class="xref">DHKEM(X25519, HKDF-SHA256), HKDF-SHA256, AES-128-GCM</a><a href="#section-toc.1-1.13.2.1.1" class="pilcrow">¶</a></p>
-<ul class="ulEmpty toc compact">
-<li class="ulEmpty toc compact" id="section-toc.1-1.13.2.1.2.1">
+<ul class="toc compact ulEmpty">
+<li class="toc compact ulEmpty" id="section-toc.1-1.13.2.1.2.1">
                     <p id="section-toc.1-1.13.2.1.2.1.1"><a href="#section-a.1.1" class="xref">A.1.1</a>.  <a href="#name-base-setup-information" class="xref">Base Setup Information</a><a href="#section-toc.1-1.13.2.1.2.1.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.13.2.1.2.2">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.13.2.1.2.2">
                     <p id="section-toc.1-1.13.2.1.2.2.1"><a href="#section-a.1.2" class="xref">A.1.2</a>.  <a href="#name-psk-setup-information" class="xref">PSK Setup Information</a><a href="#section-toc.1-1.13.2.1.2.2.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.13.2.1.2.3">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.13.2.1.2.3">
                     <p id="section-toc.1-1.13.2.1.2.3.1"><a href="#section-a.1.3" class="xref">A.1.3</a>.  <a href="#name-auth-setup-information" class="xref">Auth Setup Information</a><a href="#section-toc.1-1.13.2.1.2.3.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.13.2.1.2.4">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.13.2.1.2.4">
                     <p id="section-toc.1-1.13.2.1.2.4.1"><a href="#section-a.1.4" class="xref">A.1.4</a>.  <a href="#name-authpsk-setup-information" class="xref">AuthPSK Setup Information</a><a href="#section-toc.1-1.13.2.1.2.4.1" class="pilcrow">¶</a></p>
 </li>
                 </ul>
 </li>
-              <li class="ulEmpty toc compact" id="section-toc.1-1.13.2.2">
+              <li class="toc compact ulEmpty" id="section-toc.1-1.13.2.2">
                 <p id="section-toc.1-1.13.2.2.1"><a href="#section-a.2" class="xref">A.2</a>.  <a href="#name-dhkemx25519-hkdf-sha256-hkdf" class="xref">DHKEM(X25519, HKDF-SHA256), HKDF-SHA256, ChaCha20Poly1305</a><a href="#section-toc.1-1.13.2.2.1" class="pilcrow">¶</a></p>
-<ul class="ulEmpty toc compact">
-<li class="ulEmpty toc compact" id="section-toc.1-1.13.2.2.2.1">
+<ul class="toc compact ulEmpty">
+<li class="toc compact ulEmpty" id="section-toc.1-1.13.2.2.2.1">
                     <p id="section-toc.1-1.13.2.2.2.1.1"><a href="#section-a.2.1" class="xref">A.2.1</a>.  <a href="#name-base-setup-information-2" class="xref">Base Setup Information</a><a href="#section-toc.1-1.13.2.2.2.1.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.13.2.2.2.2">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.13.2.2.2.2">
                     <p id="section-toc.1-1.13.2.2.2.2.1"><a href="#section-a.2.2" class="xref">A.2.2</a>.  <a href="#name-psk-setup-information-2" class="xref">PSK Setup Information</a><a href="#section-toc.1-1.13.2.2.2.2.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.13.2.2.2.3">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.13.2.2.2.3">
                     <p id="section-toc.1-1.13.2.2.2.3.1"><a href="#section-a.2.3" class="xref">A.2.3</a>.  <a href="#name-auth-setup-information-2" class="xref">Auth Setup Information</a><a href="#section-toc.1-1.13.2.2.2.3.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.13.2.2.2.4">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.13.2.2.2.4">
                     <p id="section-toc.1-1.13.2.2.2.4.1"><a href="#section-a.2.4" class="xref">A.2.4</a>.  <a href="#name-authpsk-setup-information-2" class="xref">AuthPSK Setup Information</a><a href="#section-toc.1-1.13.2.2.2.4.1" class="pilcrow">¶</a></p>
 </li>
                 </ul>
 </li>
-              <li class="ulEmpty toc compact" id="section-toc.1-1.13.2.3">
+              <li class="toc compact ulEmpty" id="section-toc.1-1.13.2.3">
                 <p id="section-toc.1-1.13.2.3.1"><a href="#section-a.3" class="xref">A.3</a>.  <a href="#name-dhkemp-256-hkdf-sha256-hkdf" class="xref">DHKEM(P-256, HKDF-SHA256), HKDF-SHA256, AES-128-GCM</a><a href="#section-toc.1-1.13.2.3.1" class="pilcrow">¶</a></p>
-<ul class="ulEmpty toc compact">
-<li class="ulEmpty toc compact" id="section-toc.1-1.13.2.3.2.1">
+<ul class="toc compact ulEmpty">
+<li class="toc compact ulEmpty" id="section-toc.1-1.13.2.3.2.1">
                     <p id="section-toc.1-1.13.2.3.2.1.1"><a href="#section-a.3.1" class="xref">A.3.1</a>.  <a href="#name-base-setup-information-3" class="xref">Base Setup Information</a><a href="#section-toc.1-1.13.2.3.2.1.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.13.2.3.2.2">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.13.2.3.2.2">
                     <p id="section-toc.1-1.13.2.3.2.2.1"><a href="#section-a.3.2" class="xref">A.3.2</a>.  <a href="#name-psk-setup-information-3" class="xref">PSK Setup Information</a><a href="#section-toc.1-1.13.2.3.2.2.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.13.2.3.2.3">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.13.2.3.2.3">
                     <p id="section-toc.1-1.13.2.3.2.3.1"><a href="#section-a.3.3" class="xref">A.3.3</a>.  <a href="#name-auth-setup-information-3" class="xref">Auth Setup Information</a><a href="#section-toc.1-1.13.2.3.2.3.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.13.2.3.2.4">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.13.2.3.2.4">
                     <p id="section-toc.1-1.13.2.3.2.4.1"><a href="#section-a.3.4" class="xref">A.3.4</a>.  <a href="#name-authpsk-setup-information-3" class="xref">AuthPSK Setup Information</a><a href="#section-toc.1-1.13.2.3.2.4.1" class="pilcrow">¶</a></p>
 </li>
                 </ul>
 </li>
-              <li class="ulEmpty toc compact" id="section-toc.1-1.13.2.4">
+              <li class="toc compact ulEmpty" id="section-toc.1-1.13.2.4">
                 <p id="section-toc.1-1.13.2.4.1"><a href="#section-a.4" class="xref">A.4</a>.  <a href="#name-dhkemp-256-hkdf-sha256-hkdf-" class="xref">DHKEM(P-256, HKDF-SHA256), HKDF-SHA512, AES-128-GCM</a><a href="#section-toc.1-1.13.2.4.1" class="pilcrow">¶</a></p>
-<ul class="ulEmpty toc compact">
-<li class="ulEmpty toc compact" id="section-toc.1-1.13.2.4.2.1">
+<ul class="toc compact ulEmpty">
+<li class="toc compact ulEmpty" id="section-toc.1-1.13.2.4.2.1">
                     <p id="section-toc.1-1.13.2.4.2.1.1"><a href="#section-a.4.1" class="xref">A.4.1</a>.  <a href="#name-base-setup-information-4" class="xref">Base Setup Information</a><a href="#section-toc.1-1.13.2.4.2.1.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.13.2.4.2.2">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.13.2.4.2.2">
                     <p id="section-toc.1-1.13.2.4.2.2.1"><a href="#section-a.4.2" class="xref">A.4.2</a>.  <a href="#name-psk-setup-information-4" class="xref">PSK Setup Information</a><a href="#section-toc.1-1.13.2.4.2.2.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.13.2.4.2.3">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.13.2.4.2.3">
                     <p id="section-toc.1-1.13.2.4.2.3.1"><a href="#section-a.4.3" class="xref">A.4.3</a>.  <a href="#name-auth-setup-information-4" class="xref">Auth Setup Information</a><a href="#section-toc.1-1.13.2.4.2.3.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.13.2.4.2.4">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.13.2.4.2.4">
                     <p id="section-toc.1-1.13.2.4.2.4.1"><a href="#section-a.4.4" class="xref">A.4.4</a>.  <a href="#name-authpsk-setup-information-4" class="xref">AuthPSK Setup Information</a><a href="#section-toc.1-1.13.2.4.2.4.1" class="pilcrow">¶</a></p>
 </li>
                 </ul>
 </li>
-              <li class="ulEmpty toc compact" id="section-toc.1-1.13.2.5">
+              <li class="toc compact ulEmpty" id="section-toc.1-1.13.2.5">
                 <p id="section-toc.1-1.13.2.5.1"><a href="#section-a.5" class="xref">A.5</a>.  <a href="#name-dhkemp-256-hkdf-sha256-hkdf-s" class="xref">DHKEM(P-256, HKDF-SHA256), HKDF-SHA256, ChaCha20Poly1305</a><a href="#section-toc.1-1.13.2.5.1" class="pilcrow">¶</a></p>
-<ul class="ulEmpty toc compact">
-<li class="ulEmpty toc compact" id="section-toc.1-1.13.2.5.2.1">
+<ul class="toc compact ulEmpty">
+<li class="toc compact ulEmpty" id="section-toc.1-1.13.2.5.2.1">
                     <p id="section-toc.1-1.13.2.5.2.1.1"><a href="#section-a.5.1" class="xref">A.5.1</a>.  <a href="#name-base-setup-information-5" class="xref">Base Setup Information</a><a href="#section-toc.1-1.13.2.5.2.1.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.13.2.5.2.2">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.13.2.5.2.2">
                     <p id="section-toc.1-1.13.2.5.2.2.1"><a href="#section-a.5.2" class="xref">A.5.2</a>.  <a href="#name-psk-setup-information-5" class="xref">PSK Setup Information</a><a href="#section-toc.1-1.13.2.5.2.2.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.13.2.5.2.3">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.13.2.5.2.3">
                     <p id="section-toc.1-1.13.2.5.2.3.1"><a href="#section-a.5.3" class="xref">A.5.3</a>.  <a href="#name-auth-setup-information-5" class="xref">Auth Setup Information</a><a href="#section-toc.1-1.13.2.5.2.3.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.13.2.5.2.4">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.13.2.5.2.4">
                     <p id="section-toc.1-1.13.2.5.2.4.1"><a href="#section-a.5.4" class="xref">A.5.4</a>.  <a href="#name-authpsk-setup-information-5" class="xref">AuthPSK Setup Information</a><a href="#section-toc.1-1.13.2.5.2.4.1" class="pilcrow">¶</a></p>
 </li>
                 </ul>
 </li>
-              <li class="ulEmpty toc compact" id="section-toc.1-1.13.2.6">
+              <li class="toc compact ulEmpty" id="section-toc.1-1.13.2.6">
                 <p id="section-toc.1-1.13.2.6.1"><a href="#section-a.6" class="xref">A.6</a>.  <a href="#name-dhkemp-521-hkdf-sha512-hkdf" class="xref">DHKEM(P-521, HKDF-SHA512), HKDF-SHA512, AES-256-GCM</a><a href="#section-toc.1-1.13.2.6.1" class="pilcrow">¶</a></p>
-<ul class="ulEmpty toc compact">
-<li class="ulEmpty toc compact" id="section-toc.1-1.13.2.6.2.1">
+<ul class="toc compact ulEmpty">
+<li class="toc compact ulEmpty" id="section-toc.1-1.13.2.6.2.1">
                     <p id="section-toc.1-1.13.2.6.2.1.1"><a href="#section-a.6.1" class="xref">A.6.1</a>.  <a href="#name-base-setup-information-6" class="xref">Base Setup Information</a><a href="#section-toc.1-1.13.2.6.2.1.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.13.2.6.2.2">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.13.2.6.2.2">
                     <p id="section-toc.1-1.13.2.6.2.2.1"><a href="#section-a.6.2" class="xref">A.6.2</a>.  <a href="#name-psk-setup-information-6" class="xref">PSK Setup Information</a><a href="#section-toc.1-1.13.2.6.2.2.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.13.2.6.2.3">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.13.2.6.2.3">
                     <p id="section-toc.1-1.13.2.6.2.3.1"><a href="#section-a.6.3" class="xref">A.6.3</a>.  <a href="#name-auth-setup-information-6" class="xref">Auth Setup Information</a><a href="#section-toc.1-1.13.2.6.2.3.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.13.2.6.2.4">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.13.2.6.2.4">
                     <p id="section-toc.1-1.13.2.6.2.4.1"><a href="#section-a.6.4" class="xref">A.6.4</a>.  <a href="#name-authpsk-setup-information-6" class="xref">AuthPSK Setup Information</a><a href="#section-toc.1-1.13.2.6.2.4.1" class="pilcrow">¶</a></p>
 </li>
                 </ul>
 </li>
-              <li class="ulEmpty toc compact" id="section-toc.1-1.13.2.7">
+              <li class="toc compact ulEmpty" id="section-toc.1-1.13.2.7">
                 <p id="section-toc.1-1.13.2.7.1"><a href="#section-a.7" class="xref">A.7</a>.  <a href="#name-dhkemx25519-hkdf-sha256-hkdf-" class="xref">DHKEM(X25519, HKDF-SHA256), HKDF-SHA256, Export-Only AEAD</a><a href="#section-toc.1-1.13.2.7.1" class="pilcrow">¶</a></p>
-<ul class="ulEmpty toc compact">
-<li class="ulEmpty toc compact" id="section-toc.1-1.13.2.7.2.1">
+<ul class="toc compact ulEmpty">
+<li class="toc compact ulEmpty" id="section-toc.1-1.13.2.7.2.1">
                     <p id="section-toc.1-1.13.2.7.2.1.1"><a href="#section-a.7.1" class="xref">A.7.1</a>.  <a href="#name-base-setup-information-7" class="xref">Base Setup Information</a><a href="#section-toc.1-1.13.2.7.2.1.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.13.2.7.2.2">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.13.2.7.2.2">
                     <p id="section-toc.1-1.13.2.7.2.2.1"><a href="#section-a.7.2" class="xref">A.7.2</a>.  <a href="#name-psk-setup-information-7" class="xref">PSK Setup Information</a><a href="#section-toc.1-1.13.2.7.2.2.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.13.2.7.2.3">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.13.2.7.2.3">
                     <p id="section-toc.1-1.13.2.7.2.3.1"><a href="#section-a.7.3" class="xref">A.7.3</a>.  <a href="#name-auth-setup-information-7" class="xref">Auth Setup Information</a><a href="#section-toc.1-1.13.2.7.2.3.1" class="pilcrow">¶</a></p>
 </li>
-                  <li class="ulEmpty toc compact" id="section-toc.1-1.13.2.7.2.4">
+                  <li class="toc compact ulEmpty" id="section-toc.1-1.13.2.7.2.4">
                     <p id="section-toc.1-1.13.2.7.2.4.1"><a href="#section-a.7.4" class="xref">A.7.4</a>.  <a href="#name-authpsk-setup-information-7" class="xref">AuthPSK Setup Information</a><a href="#section-toc.1-1.13.2.7.2.4.1" class="pilcrow">¶</a></p>
 </li>
                 </ul>
 </li>
             </ul>
 </li>
-          <li class="ulEmpty toc compact" id="section-toc.1-1.14">
+          <li class="toc compact ulEmpty" id="section-toc.1-1.14">
             <p id="section-toc.1-1.14.1"><a href="#section-appendix.b" class="xref"></a><a href="#name-authors-addresses" class="xref">Authors' Addresses</a><a href="#section-toc.1-1.14.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
@@ -1292,8 +1292,9 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 operations, roles, and behaviors of HPKE:<a href="#section-3-1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-3-2.1">
-          <code>(skX, pkX)</code>: A KEM key pair used in role X; <code>skX</code> is the private
-key and <code>pkX</code> is the public key.<a href="#section-3-2.1" class="pilcrow">¶</a>
+          <code>(skX, pkX)</code>: A Key Encapsulation Mechanism (KEM) key pair used in role X,
+where X is one of S, R, or E as sender, receiver, and ephemeral, respectively;
+<code>skX</code> is the private key and <code>pkX</code> is the public key.<a href="#section-3-2.1" class="pilcrow">¶</a>
 </li>
         <li class="normal" id="section-3-2.2">
           <code>pk(skX)</code>: The KEM public key corresponding to the KEM private key <code>skX</code>.<a href="#section-3-2.2" class="pilcrow">¶</a>
@@ -1305,26 +1306,29 @@ key and <code>pkX</code> is the public key.<a href="#section-3-2.1" class="pilcr
         <li class="normal" id="section-3-2.5">Ephemeral (E): Role of a fresh random value meant for one-time use.<a href="#section-3-2.5" class="pilcrow">¶</a>
 </li>
         <li class="normal" id="section-3-2.6">
-          <code>I2OSP(n)</code> and <code>OS2IP(x)</code>: Convert a byte string to and from a non-negative
-integer as described in <span>[<a href="#RFC8017" class="xref">RFC8017</a>]</span>. Note that these functions operate on
-byte strings in big-endian byte order.<a href="#section-3-2.6" class="pilcrow">¶</a>
+          <code>I2OSP(n, w)</code>: Convert non-negative integer <code>n</code> to a <code>w</code>-length,
+big-endian byte string as described in <span>[<a href="#RFC8017" class="xref">RFC8017</a>]</span>.<a href="#section-3-2.6" class="pilcrow">¶</a>
 </li>
         <li class="normal" id="section-3-2.7">
-          <code>concat(x0, ..., xN)</code>: Concatenation of byte strings.
-<code>concat(0x01, 0x0203, 0x040506) = 0x010203040506</code>.<a href="#section-3-2.7" class="pilcrow">¶</a>
+          <code>OS2IP(x)</code>: Convert byte string <code>x</code> to a non-negative integer as
+described in <span>[<a href="#RFC8017" class="xref">RFC8017</a>]</span>, assuming big-endian byte order.<a href="#section-3-2.7" class="pilcrow">¶</a>
 </li>
         <li class="normal" id="section-3-2.8">
-          <code>random(n)</code>: A pseudorandom byte string of length <code>n</code> bytes<a href="#section-3-2.8" class="pilcrow">¶</a>
+          <code>concat(x0, ..., xN)</code>: Concatenation of byte strings.
+<code>concat(0x01, 0x0203, 0x040506) = 0x010203040506</code>.<a href="#section-3-2.8" class="pilcrow">¶</a>
 </li>
         <li class="normal" id="section-3-2.9">
+          <code>random(n)</code>: A pseudorandom byte string of length <code>n</code> bytes<a href="#section-3-2.9" class="pilcrow">¶</a>
+</li>
+        <li class="normal" id="section-3-2.10">
           <code>xor(a,b)</code>: XOR of byte strings; <code>xor(0xF0F0, 0x1234) = 0xE2C4</code>.
 It is an error to call this function with two arguments of unequal
-length.<a href="#section-3-2.9" class="pilcrow">¶</a>
+length.<a href="#section-3-2.10" class="pilcrow">¶</a>
 </li>
       </ul>
 </section>
 </div>
-<div id="cryptographic-dependencies">
+<div id="base-crypto">
 <section id="section-4">
       <h2 id="name-cryptographic-dependencies">
 <a href="#section-4" class="section-number selfRef">4. </a><a href="#name-cryptographic-dependencies" class="section-name selfRef">Cryptographic Dependencies</a>
@@ -1335,12 +1339,12 @@ length.<a href="#section-3-2.9" class="pilcrow">¶</a>
           <p id="section-4-2.1.1">A Key Encapsulation Mechanism (KEM):<a href="#section-4-2.1.1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-4-2.1.2.1">
-              <code>GenerateKeyPair()</code>: Randomized algorithm to generate a key pair <code>(skX, pkX)</code><a href="#section-4-2.1.2.1" class="pilcrow">¶</a>
+              <code>GenerateKeyPair()</code>: Randomized algorithm to generate a key pair <code>(skX, pkX)</code>.<a href="#section-4-2.1.2.1" class="pilcrow">¶</a>
 </li>
             <li class="normal" id="section-4-2.1.2.2">
               <code>DeriveKeyPair(ikm)</code>: Deterministic algorithm to derive a key pair
 <code>(skX, pkX)</code> from the byte string <code>ikm</code>, where <code>ikm</code> SHOULD have at
-least <code>Nsk</code> bytes of entropy (see <a href="#derive-key-pair" class="xref">Section 7.1.3</a> for discussion)<a href="#section-4-2.1.2.2" class="pilcrow">¶</a>
+least <code>Nsk</code> bytes of entropy (see <a href="#derive-key-pair" class="xref">Section 7.1.3</a> for discussion).<a href="#section-4-2.1.2.2" class="pilcrow">¶</a>
 </li>
             <li class="normal" id="section-4-2.1.2.3">
               <code>SerializePublicKey(pkX)</code>: Produce a byte string of length <code>Npk</code> encoding the
@@ -1374,16 +1378,16 @@ is assured that the KEM shared secret was generated by the holder of
 the private key <code>skS</code>.<a href="#section-4-2.1.2.8" class="pilcrow">¶</a>
 </li>
             <li class="normal" id="section-4-2.1.2.9">
-              <code>Nsecret</code>: The length in bytes of a KEM shared secret produced by this KEM<a href="#section-4-2.1.2.9" class="pilcrow">¶</a>
+              <code>Nsecret</code>: The length in bytes of a KEM shared secret produced by this KEM.<a href="#section-4-2.1.2.9" class="pilcrow">¶</a>
 </li>
             <li class="normal" id="section-4-2.1.2.10">
-              <code>Nenc</code>: The length in bytes of an encapsulated key produced by this KEM<a href="#section-4-2.1.2.10" class="pilcrow">¶</a>
+              <code>Nenc</code>: The length in bytes of an encapsulated key produced by this KEM.<a href="#section-4-2.1.2.10" class="pilcrow">¶</a>
 </li>
             <li class="normal" id="section-4-2.1.2.11">
-              <code>Npk</code>: The length in bytes of an encoded public key for this KEM<a href="#section-4-2.1.2.11" class="pilcrow">¶</a>
+              <code>Npk</code>: The length in bytes of an encoded public key for this KEM.<a href="#section-4-2.1.2.11" class="pilcrow">¶</a>
 </li>
             <li class="normal" id="section-4-2.1.2.12">
-              <code>Nsk</code>: The length in bytes of an encoded private key for this KEM<a href="#section-4-2.1.2.12" class="pilcrow">¶</a>
+              <code>Nsk</code>: The length in bytes of an encoded private key for this KEM.<a href="#section-4-2.1.2.12" class="pilcrow">¶</a>
 </li>
           </ul>
 </li>
@@ -1393,14 +1397,14 @@ the private key <code>skS</code>.<a href="#section-4-2.1.2.8" class="pilcrow">¶
 <li class="normal" id="section-4-2.2.2.1">
               <code>Extract(salt, ikm)</code>: Extract a pseudorandom key of fixed length <code>Nh</code> bytes
 from input keying material <code>ikm</code> and an optional byte string
-<code>salt</code><a href="#section-4-2.2.2.1" class="pilcrow">¶</a>
+<code>salt</code>.<a href="#section-4-2.2.2.1" class="pilcrow">¶</a>
 </li>
             <li class="normal" id="section-4-2.2.2.2">
               <code>Expand(prk, info, L)</code>: Expand a pseudorandom key <code>prk</code> using
-optional string <code>info</code> into <code>L</code> bytes of output keying material<a href="#section-4-2.2.2.2" class="pilcrow">¶</a>
+optional string <code>info</code> into <code>L</code> bytes of output keying material.<a href="#section-4-2.2.2.2" class="pilcrow">¶</a>
 </li>
             <li class="normal" id="section-4-2.2.2.3">
-              <code>Nh</code>: The output size of the <code>Extract()</code> function in bytes<a href="#section-4-2.2.2.3" class="pilcrow">¶</a>
+              <code>Nh</code>: The output size of the <code>Extract()</code> function in bytes.<a href="#section-4-2.2.2.3" class="pilcrow">¶</a>
 </li>
           </ul>
 </li>
@@ -1420,10 +1424,10 @@ returning plaintext message <code>pt</code>. This function can raise an
 <code>OpenError</code> or <code>NonceOverflowError</code> upon failure.<a href="#section-4-2.3.2.2" class="pilcrow">¶</a>
 </li>
             <li class="normal" id="section-4-2.3.2.3">
-              <code>Nk</code>: The length in bytes of a key for this algorithm<a href="#section-4-2.3.2.3" class="pilcrow">¶</a>
+              <code>Nk</code>: The length in bytes of a key for this algorithm.<a href="#section-4-2.3.2.3" class="pilcrow">¶</a>
 </li>
             <li class="normal" id="section-4-2.3.2.4">
-              <code>Nn</code>: The length in bytes of a nonce for this algorithm<a href="#section-4-2.3.2.4" class="pilcrow">¶</a>
+              <code>Nn</code>: The length in bytes of a nonce for this algorithm.<a href="#section-4-2.3.2.4" class="pilcrow">¶</a>
 </li>
           </ul>
 </li>
@@ -1457,22 +1461,21 @@ KDF calls as well as context binding:<a href="#section-4-9" class="pilcrow">¶</
 <div class="artwork art-text alignLeft" id="section-4-10">
 <pre>
 def LabeledExtract(salt, label, ikm):
-  labeled_ikm = concat("HPKE-07", suite_id, label, ikm)
+  labeled_ikm = concat("HPKE-v1", suite_id, label, ikm)
   return Extract(salt, labeled_ikm)
 
 def LabeledExpand(prk, label, info, L):
-  labeled_info = concat(I2OSP(L, 2), "HPKE-07", suite_id,
+  labeled_info = concat(I2OSP(L, 2), "HPKE-v1", suite_id,
                         label, info)
   return Expand(prk, labeled_info, L)
 </pre><a href="#section-4-10" class="pilcrow">¶</a>
 </div>
-<p id="section-4-11">[[RFC editor: please change "HPKE-07" to "RFCXXXX", where XXXX is the final number, before publication.]]<a href="#section-4-11" class="pilcrow">¶</a></p>
-<p id="section-4-12">The value of <code>suite_id</code> depends on where the KDF is used; it is assumed
+<p id="section-4-11">The value of <code>suite_id</code> depends on where the KDF is used; it is assumed
 implicit from the implementation and not passed as a parameter. If used
 inside a KEM algorithm, <code>suite_id</code> MUST start with "KEM" and identify
 this KEM algorithm; if used in the remainder of HPKE, it MUST start with
 "HPKE" and identify the entire ciphersuite in use. See sections <a href="#dhkem" class="xref">Section 4.1</a>
-and <a href="#encryption-context" class="xref">Section 5.1</a> for details.<a href="#section-4-12" class="pilcrow">¶</a></p>
+and <a href="#encryption-context" class="xref">Section 5.1</a> for details.<a href="#section-4-11" class="pilcrow">¶</a></p>
 <div id="dhkem">
 <section id="section-4.1">
         <h3 id="name-dh-based-kem">
@@ -1482,47 +1485,29 @@ and <a href="#encryption-context" class="xref">Section 5.1</a> for details.<a hr
 following operations:<a href="#section-4.1-1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-4.1-2.1">
-            <code>GenerateKeyPair()</code>: Randomized algorithm to generate a key pair <code>(skX, pkX)</code>
-for the DH group in use<a href="#section-4.1-2.1" class="pilcrow">¶</a>
+            <code>DH(skX, pkY)</code>: Perform a non-interactive Diffie-Hellman exchange using
+the private key <code>skX</code> and public key <code>pkY</code> to produce a Diffie-Hellman shared secret of
+length <code>Ndh</code>. This function can raise a <code>ValidationError</code> as described
+in <a href="#validation" class="xref">Section 7.1.4</a>.<a href="#section-4.1-2.1" class="pilcrow">¶</a>
 </li>
           <li class="normal" id="section-4.1-2.2">
-            <code>DeriveKeyPair(ikm)</code>: Deterministic algorithm to derive a key pair
-<code>(skX, pkX)</code> from the byte string <code>ikm</code>, where <code>ikm</code> SHOULD have at
-least <code>Nsk</code> bytes of entropy (see <a href="#derive-key-pair" class="xref">Section 7.1.3</a> for discussion)<a href="#section-4.1-2.2" class="pilcrow">¶</a>
+            <code>Ndh</code>: The length in bytes of a Diffie-Hellman shared secret produced
+by <code>DH()</code>.<a href="#section-4.1-2.2" class="pilcrow">¶</a>
 </li>
           <li class="normal" id="section-4.1-2.3">
-            <code>DH(skX, pkY)</code>: Perform a non-interactive DH exchange using the
-private key <code>skX</code> and public key <code>pkY</code> to produce a Diffie-Hellman
-shared secret of length <code>Ndh</code>. This function can raise a
-<code>ValidationError</code> as described in <a href="#validation" class="xref">Section 7.1.4</a>.<a href="#section-4.1-2.3" class="pilcrow">¶</a>
-</li>
-          <li class="normal" id="section-4.1-2.4">
-            <code>Serialize(pk)</code>: Produce a byte string of length <code>Npk</code>
-encoding the public key <code>pk</code><a href="#section-4.1-2.4" class="pilcrow">¶</a>
-</li>
-          <li class="normal" id="section-4.1-2.5">
-            <code>Deserialize(enc)</code>: Parse a byte string of length <code>Npk</code> to recover a
-public key. This function can raise a <code>DeserializeError</code> error upon
-<code>enc</code> deserialization failure.<a href="#section-4.1-2.5" class="pilcrow">¶</a>
-</li>
-          <li class="normal" id="section-4.1-2.6">
-            <code>Ndh</code>: The length in bytes of a Diffie-Hellman shared secret produced
-by <code>DH()</code><a href="#section-4.1-2.6" class="pilcrow">¶</a>
-</li>
-          <li class="normal" id="section-4.1-2.7">
-            <code>Nsk</code>: The length in bytes of a Diffie-Hellman private key<a href="#section-4.1-2.7" class="pilcrow">¶</a>
+            <code>Nsk</code>: The length in bytes of a Diffie-Hellman private key.<a href="#section-4.1-2.3" class="pilcrow">¶</a>
 </li>
         </ul>
-<p id="section-4.1-3">Since an encapsulated key is a Diffie-Hellman public key in this KEM
-algorithm, we use <code>Serialize()</code> to encode them, and <code>Npk</code> equals <code>Nenc</code>.
-The same applies to <code>Deserialize()</code>.<a href="#section-4.1-3" class="pilcrow">¶</a></p>
-<p id="section-4.1-4">Then we can construct a KEM called <code>DHKEM(Group, KDF)</code> in the
-following way, where <code>Group</code> denotes the Diffie-Hellman group and
-<code>KDF</code> the KDF. The function parameters <code>pkR</code> and <code>pkS</code> are deserialized
-public keys, and <code>enc</code> is a serialized public key.
-<a href="#derive-key-pair" class="xref">Section 7.1.3</a> contains the <code>DeriveKeyPair</code> function specification
-for DHKEMs defined in this document.<a href="#section-4.1-4" class="pilcrow">¶</a></p>
-<div class="artwork art-text alignLeft" id="section-4.1-5">
+<p id="section-4.1-3">Then we can construct a KEM that implements the interface defined in <a href="#base-crypto" class="xref">Section 4</a>
+called <code>DHKEM(Group, KDF)</code> in the following way, where <code>Group</code> denotes the
+Diffie-Hellman group and <code>KDF</code> the KDF. The function parameters <code>pkR</code> and <code>pkS</code>
+are deserialized public keys, and <code>enc</code> is a serialized public key. Since
+encapsulated keys are Diffie-Hellman public keys in this KEM algorithm,
+we use <code>SerializePublicKey()</code> and <code>DeserializePublicKey()</code> to encode and decode
+them, respectively. <code>Npk</code> equals <code>Nenc</code>. <code>GenerateKeyPair()</code> produces a key pair
+for the Diffie-Hellman group in use. <a href="#derive-key-pair" class="xref">Section 7.1.3</a> contains the
+<code>DeriveKeyPair()</code> function specification for DHKEMs defined in this document.<a href="#section-4.1-3" class="pilcrow">¶</a></p>
+<div class="artwork art-text alignLeft" id="section-4.1-4">
 <pre>
 def ExtractAndExpand(dh, kem_context):
   eae_prk = LabeledExtract("", "eae_prk", dh)
@@ -1533,19 +1518,19 @@ def ExtractAndExpand(dh, kem_context):
 def Encap(pkR):
   skE, pkE = GenerateKeyPair()
   dh = DH(skE, pkR)
-  enc = Serialize(pkE)
+  enc = SerializePublicKey(pkE)
 
-  pkRm = Serialize(pkR)
+  pkRm = SerializePublicKey(pkR)
   kem_context = concat(enc, pkRm)
 
   shared_secret = ExtractAndExpand(dh, kem_context)
   return shared_secret, enc
 
 def Decap(enc, skR):
-  pkE = Deserialize(enc)
+  pkE = DeserializePublicKey(enc)
   dh = DH(skR, pkE)
 
-  pkRm = Serialize(pk(skR))
+  pkRm = SerializePublicKey(pk(skR))
   kem_context = concat(enc, pkRm)
 
   shared_secret = ExtractAndExpand(dh, kem_context)
@@ -1554,57 +1539,57 @@ def Decap(enc, skR):
 def AuthEncap(pkR, skS):
   skE, pkE = GenerateKeyPair()
   dh = concat(DH(skE, pkR), DH(skS, pkR))
-  enc = Serialize(pkE)
+  enc = SerializePublicKey(pkE)
 
-  pkRm = Serialize(pkR)
-  pkSm = Serialize(pk(skS))
+  pkRm = SerializePublicKey(pkR)
+  pkSm = SerializePublicKey(pk(skS))
   kem_context = concat(enc, pkRm, pkSm)
 
   shared_secret = ExtractAndExpand(dh, kem_context)
   return shared_secret, enc
 
 def AuthDecap(enc, skR, pkS):
-  pkE = Deserialize(enc)
+  pkE = DeserializePublicKey(enc)
   dh = concat(DH(skR, pkE), DH(skR, pkS))
 
-  pkRm = Serialize(pk(skR))
-  pkSm = Serialize(pkS)
+  pkRm = SerializePublicKey(pk(skR))
+  pkSm = SerializePublicKey(pkS)
   kem_context = concat(enc, pkRm, pkSm)
 
   shared_secret = ExtractAndExpand(dh, kem_context)
   return shared_secret
-</pre><a href="#section-4.1-5" class="pilcrow">¶</a>
+</pre><a href="#section-4.1-4" class="pilcrow">¶</a>
 </div>
-<p id="section-4.1-6">The implicit <code>suite_id</code> value used within <code>LabeledExtract</code> and
+<p id="section-4.1-5">The implicit <code>suite_id</code> value used within <code>LabeledExtract</code> and
 <code>LabeledExpand</code> is defined as follows, where <code>kem_id</code> is defined
-in <a href="#kem-ids" class="xref">Section 7.1</a>:<a href="#section-4.1-6" class="pilcrow">¶</a></p>
-<div class="artwork art-text alignLeft" id="section-4.1-7">
+in <a href="#kem-ids" class="xref">Section 7.1</a>:<a href="#section-4.1-5" class="pilcrow">¶</a></p>
+<div class="artwork art-text alignLeft" id="section-4.1-6">
 <pre>
 suite_id = concat("KEM", I2OSP(kem_id, 2))
-</pre><a href="#section-4.1-7" class="pilcrow">¶</a>
+</pre><a href="#section-4.1-6" class="pilcrow">¶</a>
 </div>
-<p id="section-4.1-8">The KDF used in DHKEM can be equal to or different from the KDF used
+<p id="section-4.1-7">The KDF used in DHKEM can be equal to or different from the KDF used
 in the remainder of HPKE, depending on the chosen variant.
 Implementations MUST make sure to use the constants (<code>Nh</code>) and function
 calls (<code>LabeledExtract</code>, <code>LabeledExpand</code>) of the appropriate KDF when
 implementing DHKEM. See <a href="#kdf-choice" class="xref">Section 8.3</a> for a comment on the choice of
 a KDF for the remainder of HPKE, and <a href="#domain-separation" class="xref">Section 8.5</a> for the
-rationale of the labels.<a href="#section-4.1-8" class="pilcrow">¶</a></p>
-<p id="section-4.1-9">For the variants of DHKEM defined in this document, the size <code>Nsecret</code> of the
+rationale of the labels.<a href="#section-4.1-7" class="pilcrow">¶</a></p>
+<p id="section-4.1-8">For the variants of DHKEM defined in this document, the size <code>Nsecret</code> of the
 KEM shared secret is equal to the output length of the hash function
 underlying the KDF. For P-256, P-384 and P-521, the size <code>Ndh</code> of the
 Diffie-Hellman shared secret is equal to 32, 48, and 66, respectively,
 corresponding to the x-coordinate of the resulting elliptic curve point <span>[<a href="#IEEE1363" class="xref">IEEE1363</a>]</span>.
 For X25519 and X448, the size <code>Ndh</code> of is equal to 32 and 56, respectively
-(see <span>[<a href="#RFC7748" class="xref">RFC7748</a>]</span>, Section 5).<a href="#section-4.1-9" class="pilcrow">¶</a></p>
-<p id="section-4.1-10">It is important to note that the <code>AuthEncap()</code> and <code>AuthDecap()</code> functions of the
+(see <span>[<a href="#RFC7748" class="xref">RFC7748</a>]</span>, Section 5).<a href="#section-4.1-8" class="pilcrow">¶</a></p>
+<p id="section-4.1-9">It is important to note that the <code>AuthEncap()</code> and <code>AuthDecap()</code> functions of the
 DHKEM variants defined in this document are vulnerable to key-compromise
 impersonation (KCI). This means the assurance that the KEM shared secret
 was generated by the holder of the private key <code>skS</code> does not hold if
 the recipient private key <code>skR</code> is compromised. See <a href="#sec-properties" class="xref">Section 8.1</a>
-for more details.<a href="#section-4.1-10" class="pilcrow">¶</a></p>
-<p id="section-4.1-11">Senders and recipients MUST validate KEM inputs and outputs as described
-in <a href="#kem-ids" class="xref">Section 7.1</a>.<a href="#section-4.1-11" class="pilcrow">¶</a></p>
+for more details.<a href="#section-4.1-9" class="pilcrow">¶</a></p>
+<p id="section-4.1-10">Senders and recipients MUST validate KEM inputs and outputs as described
+in <a href="#kem-ids" class="xref">Section 7.1</a>.<a href="#section-4.1-10" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -1629,8 +1614,12 @@ possession of a KEM private key, and one which authenticates possession of both
 a pre-shared key and a KEM private key. All authenticated variants contribute
 additional keying material to the encryption operation. The following one-byte
 values will be used to distinguish between modes:<a href="#section-5-2" class="pilcrow">¶</a></p>
+<span id="name-hpke-modes"></span><div id="hpke-modes">
 <table class="center" id="table-1">
-        <caption><a href="#table-1" class="selfRef">Table 1</a></caption>
+        <caption>
+<a href="#table-1" class="selfRef">Table 1</a>:
+<a href="#name-hpke-modes" class="selfRef">HPKE Modes</a>
+        </caption>
 <thead>
           <tr>
             <th class="text-left" rowspan="1" colspan="1">Mode</th>
@@ -1656,12 +1645,13 @@ values will be used to distinguish between modes:<a href="#section-5-2" class="p
           </tr>
         </tbody>
       </table>
+</div>
 <p id="section-5-4">All these cases follow the same basic two-step pattern:<a href="#section-5-4" class="pilcrow">¶</a></p>
 <ol start="1" type="1" class="normal type-1" id="section-5-5">
 <li id="section-5-5.1">Set up an encryption context that is shared between the sender
-and the recipient<a href="#section-5-5.1" class="pilcrow">¶</a>
+and the recipient.<a href="#section-5-5.1" class="pilcrow">¶</a>
 </li>
-        <li id="section-5-5.2">Use that context to encrypt or decrypt content<a href="#section-5-5.2" class="pilcrow">¶</a>
+        <li id="section-5-5.2">Use that context to encrypt or decrypt content.<a href="#section-5-5.2" class="pilcrow">¶</a>
 </li>
       </ol>
 <p id="section-5-6">A <em>context</em> encodes the AEAD algorithm and key in use, and manages
@@ -1694,21 +1684,21 @@ key schedule that translates the protocol inputs into an encryption
 context. The key schedule inputs are as follows:<a href="#section-5.1-1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-5.1-2.1">
-            <code>mode</code> - A one-byte value indicating the HPKE mode, defined in <a href="#hpke" class="xref">Section 5</a>.<a href="#section-5.1-2.1" class="pilcrow">¶</a>
+            <code>mode</code> - A one-byte value indicating the HPKE mode, defined in <a href="#hpke-modes" class="xref">Table 1</a>.<a href="#section-5.1-2.1" class="pilcrow">¶</a>
 </li>
           <li class="normal" id="section-5.1-2.2">
-            <code>shared_secret</code> - A KEM shared secret generated for this transaction<a href="#section-5.1-2.2" class="pilcrow">¶</a>
+            <code>shared_secret</code> - A KEM shared secret generated for this transaction.<a href="#section-5.1-2.2" class="pilcrow">¶</a>
 </li>
           <li class="normal" id="section-5.1-2.3">
             <code>info</code> - Application-supplied information (optional; default value
-"")<a href="#section-5.1-2.3" class="pilcrow">¶</a>
+"").<a href="#section-5.1-2.3" class="pilcrow">¶</a>
 </li>
           <li class="normal" id="section-5.1-2.4">
             <code>psk</code> - A pre-shared key (PSK) held by both the sender
-and the recipient (optional; default value "")<a href="#section-5.1-2.4" class="pilcrow">¶</a>
+and the recipient (optional; default value "").<a href="#section-5.1-2.4" class="pilcrow">¶</a>
 </li>
           <li class="normal" id="section-5.1-2.5">
-            <code>psk_id</code> - An identifier for the PSK (optional; default value "")<a href="#section-5.1-2.5" class="pilcrow">¶</a>
+            <code>psk_id</code> - An identifier for the PSK (optional; default value "").<a href="#section-5.1-2.5" class="pilcrow">¶</a>
 </li>
         </ul>
 <p id="section-5.1-3">Senders and recipients MUST validate KEM inputs and outputs as described
@@ -1733,10 +1723,10 @@ AuthPSK modes, the <code>psk</code> and <code>psk_id</code> arguments are provid
 then the recipient is assured that the sender held the corresponding
 pre-shared key. See <a href="#sec-properties" class="xref">Section 8.1</a> for more details.<a href="#section-5.1-7" class="pilcrow">¶</a></p>
 <p id="section-5.1-8">The HPKE algorithm identifiers, i.e., the KEM <code>kem_id</code>, KDF <code>kdf_id</code>, and
-AEAD <code>aead_id</code> 2-byte code points as defined in <a href="#ciphersuites" class="xref">Section 7</a>, are
-assumed implicit from the implementation and not passed as parameters.
-The implicit <code>suite_id</code> value used within <code>LabeledExtract</code> and
-<code>LabeledExpand</code> is defined based on them as follows:<a href="#section-5.1-8" class="pilcrow">¶</a></p>
+AEAD <code>aead_id</code> 2-byte code points as defined in <a href="#kemid-values" class="xref">Table 2</a>, <a href="#kdfid-values" class="xref">Table 3</a>,
+and <a href="#aeadid-values" class="xref">Table 5</a>, respectively, are assumed implicit from the implementation
+and not passed as parameters. The implicit <code>suite_id</code> value used within
+<code>LabeledExtract</code> and <code>LabeledExpand</code> is defined based on them as follows:<a href="#section-5.1-8" class="pilcrow">¶</a></p>
 <div class="artwork art-text alignLeft" id="section-5.1-9">
 <pre>
 suite_id = concat(
@@ -2001,7 +1991,7 @@ def Context&lt;ROLE&gt;.IncrementSeq():
 <p id="section-5.2-13">The sender's context MUST NOT be used for decryption. Similarly, the recipient's
 context MUST NOT be used for encryption. Higher-level protocols re-using the HPKE
 key exchange for more general purposes can derive separate keying material as
-needed using use the Secret Export interface; see <a href="#hpke-export" class="xref">Section 5.3</a> and <a href="#bidirectional" class="xref">Section 8.7</a> 
+needed using use the Secret Export interface; see <a href="#hpke-export" class="xref">Section 5.3</a> and <a href="#bidirectional" class="xref">Section 8.7</a>
 for more details.<a href="#section-5.2-13" class="pilcrow">¶</a></p>
 <p id="section-5.2-14">It is up to the application to ensure that encryptions and decryptions are
 done in the proper sequence, so that encryption and decryption nonces align.
@@ -2124,8 +2114,12 @@ be empty.<a href="#section-6.2-3" class="pilcrow">¶</a></p>
         <h3 id="name-key-encapsulation-mechanism">
 <a href="#section-7.1" class="section-number selfRef">7.1. </a><a href="#name-key-encapsulation-mechanism" class="section-name selfRef">Key Encapsulation Mechanisms (KEMs)</a>
         </h3>
+<span id="name-kem-ids"></span><div id="kemid-values">
 <table class="center" id="table-2">
-          <caption><a href="#table-2" class="selfRef">Table 2</a></caption>
+          <caption>
+<a href="#table-2" class="selfRef">Table 2</a>:
+<a href="#name-kem-ids" class="selfRef">KEM IDs</a>
+          </caption>
 <thead>
             <tr>
               <th class="text-left" rowspan="1" colspan="1">Value</th>
@@ -2211,6 +2205,7 @@ be empty.<a href="#section-6.2-3" class="pilcrow">¶</a></p>
             </tr>
           </tbody>
         </table>
+</div>
 <p id="section-7.1-2">The <code>Auth</code> column indicates if the KEM algorithm provides the <code>AuthEncap()</code>/<code>AuthDecap()</code>
 interface. The meaning of all other columns is explained in <a href="#kem-template" class="xref">Section 10.1</a>.<a href="#section-7.1-2" class="pilcrow">¶</a></p>
 <div id="serializepublickey-and-deserializepublickey">
@@ -2218,13 +2213,13 @@ interface. The meaning of all other columns is explained in <a href="#kem-templa
           <h4 id="name-serializepublickey-and-dese">
 <a href="#section-7.1.1" class="section-number selfRef">7.1.1. </a><a href="#name-serializepublickey-and-dese" class="section-name selfRef">SerializePublicKey and DeserializePublicKey</a>
           </h4>
-<p id="section-7.1.1-1">For P-256, P-384 and P-521, the <code>Serialize()</code> function of the
+<p id="section-7.1.1-1">For P-256, P-384 and P-521, the <code>SerializePublicKey()</code> function of the
 KEM performs the uncompressed Elliptic-Curve-Point-to-Octet-String
-conversion according to <span>[<a href="#SECG" class="xref">SECG</a>]</span>. <code>Deserialize()</code> performs the
+conversion according to <span>[<a href="#SECG" class="xref">SECG</a>]</span>. <code>DeserializePublicKey()</code> performs the
 uncompressed Octet-String-to-Elliptic-Curve-Point conversion.<a href="#section-7.1.1-1" class="pilcrow">¶</a></p>
-<p id="section-7.1.1-2">For X25519 and X448, the <code>Serialize()</code> and <code>Deserialize()</code> functions
-are the identity function, since these curves already use fixed-length byte
-strings for public keys.<a href="#section-7.1.1-2" class="pilcrow">¶</a></p>
+<p id="section-7.1.1-2">For X25519 and X448, the <code>SerializePublicKey()</code> and <code>DeserializePublicKey()</code>
+functions are the identity function, since these curves already use
+fixed-length byte strings for public keys.<a href="#section-7.1.1-2" class="pilcrow">¶</a></p>
 <p id="section-7.1.1-3">Some deserialized public keys MUST be validated before they can be used. See
 <a href="#validation" class="xref">Section 7.1.4</a> for specifics.<a href="#section-7.1.1-3" class="pilcrow">¶</a></p>
 </section>
@@ -2361,8 +2356,12 @@ algorithm whose output length is <code>Npk</code>.<a href="#section-7.1.5-3" cla
         <h3 id="name-key-derivation-functions-kd">
 <a href="#section-7.2" class="section-number selfRef">7.2. </a><a href="#name-key-derivation-functions-kd" class="section-name selfRef">Key Derivation Functions (KDFs)</a>
         </h3>
+<span id="name-kdf-ids"></span><div id="kdfid-values">
 <table class="center" id="table-3">
-          <caption><a href="#table-3" class="selfRef">Table 3</a></caption>
+          <caption>
+<a href="#table-3" class="selfRef">Table 3</a>:
+<a href="#name-kdf-ids" class="selfRef">KDF IDs</a>
+          </caption>
 <thead>
             <tr>
               <th class="text-left" rowspan="1" colspan="1">Value</th>
@@ -2404,6 +2403,7 @@ algorithm whose output length is <code>Npk</code>.<a href="#section-7.1.5-3" cla
             </tr>
           </tbody>
         </table>
+</div>
 <div id="kdf-input-length">
 <section id="section-7.2.1">
           <h4 id="name-input-length-restrictions">
@@ -2417,8 +2417,12 @@ is available for the inputs <code>psk</code>, <code>psk_id</code>, <code>info</c
 i.e., the variable-length parameters provided by HPKE applications.
 The following table lists the maximum allowed lengths of these fields
 for the KDFs defined in this document, as inclusive bounds in bytes:<a href="#section-7.2.1-1" class="pilcrow">¶</a></p>
+<span id="name-application-input-limits"></span><div id="input-limits">
 <table class="center" id="table-4">
-            <caption><a href="#table-4" class="selfRef">Table 4</a></caption>
+            <caption>
+<a href="#table-4" class="selfRef">Table 4</a>:
+<a href="#name-application-input-limits" class="selfRef">Application Input Limits</a>
+            </caption>
 <thead>
               <tr>
                 <th class="text-left" rowspan="1" colspan="1">Input</th>
@@ -2454,6 +2458,7 @@ for the KDFs defined in this document, as inclusive bounds in bytes:<a href="#se
               </tr>
             </tbody>
           </table>
+</div>
 <p id="section-7.2.1-3">This shows that the limits are only marginally smaller than the maximum
 input length of the underlying hash function; these limits are large and
 unlikely to be reached in practical applications. Future specifications
@@ -2463,7 +2468,7 @@ parameters.<a href="#section-7.2.1-3" class="pilcrow">¶</a></p>
 <code>LabeledExtract()</code> were computed with the following expression:<a href="#section-7.2.1-4" class="pilcrow">¶</a></p>
 <div class="artwork art-text alignLeft" id="section-7.2.1-5">
 <pre>
-max_size_hash_input - Nb - size_label_rfcXXXX -
+max_size_hash_input - Nb - size_version_label -
     size_suite_id - size_input_label
 </pre><a href="#section-7.2.1-5" class="pilcrow">¶</a>
 </div>
@@ -2471,17 +2476,16 @@ max_size_hash_input - Nb - size_label_rfcXXXX -
 was computed with the following expression:<a href="#section-7.2.1-6" class="pilcrow">¶</a></p>
 <div class="artwork art-text alignLeft" id="section-7.2.1-7">
 <pre>
-max_size_hash_input - Nb - Nh - size_label_rfcXXXX -
+max_size_hash_input - Nb - Nh - size_version_label -
     size_suite_id - size_input_label - 2 - 1
 </pre><a href="#section-7.2.1-7" class="pilcrow">¶</a>
 </div>
 <p id="section-7.2.1-8">In these equations, <code>max_size_hash_input</code> is the maximum input length
 of the underlying hash function in bytes, <code>Nb</code> is the block size of the
-underlying hash function in bytes, <code>size_label_rfcXXXX</code> is the size
-of "HPKE-07" in bytes and equals 7, <code>size_suite_id</code> is the size of the
+underlying hash function in bytes, <code>size_version_label</code> is the size
+of "HPKE-v1" in bytes and equals 7, <code>size_suite_id</code> is the size of the
 <code>suite_id</code> and equals 10, and <code>size_input_label</code> is the size
 of the label used as parameter to <code>LabeledExtract()</code> or <code>LabeledExpand()</code>.<a href="#section-7.2.1-8" class="pilcrow">¶</a></p>
-<p id="section-7.2.1-9">[[RFC editor: please change "HPKE-07" to "RFCXXXX", where XXXX is the final number, before publication.]]<a href="#section-7.2.1-9" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -2491,8 +2495,12 @@ of the label used as parameter to <code>LabeledExtract()</code> or <code>Labeled
         <h3 id="name-authenticated-encryption-wi">
 <a href="#section-7.3" class="section-number selfRef">7.3. </a><a href="#name-authenticated-encryption-wi" class="section-name selfRef">Authenticated Encryption with Associated Data (AEAD) Functions</a>
         </h3>
+<span id="name-aead-ids"></span><div id="aeadid-values">
 <table class="center" id="table-5">
-          <caption><a href="#table-5" class="selfRef">Table 5</a></caption>
+          <caption>
+<a href="#table-5" class="selfRef">Table 5</a>:
+<a href="#name-aead-ids" class="selfRef">AEAD IDs</a>
+          </caption>
 <thead>
             <tr>
               <th class="text-left" rowspan="1" colspan="1">Value</th>
@@ -2546,6 +2554,7 @@ of the label used as parameter to <code>LabeledExtract()</code> or <code>Labeled
             </tr>
           </tbody>
         </table>
+</div>
 <p id="section-7.3-2">The <code>0xFFFF</code> AEAD ID is reserved for applications which only use the Export
 interface; see <a href="#hpke-export" class="xref">Section 5.3</a> for more details.<a href="#section-7.3-2" class="pilcrow">¶</a></p>
 </section>
@@ -2882,14 +2891,14 @@ them as independent functions even if instantiated by the same KDF.<a href="#sec
 <code>Extract()</code> and <code>Expand()</code> can be modeled as functions independent from the
 invocations of <code>Extract()</code> and <code>Expand()</code> in the remainder of HPKE. One way to
 ensure this is by using an equal or similar prefixing scheme with
-an identifier different from "HPKE-07". Particular attention needs to
+an identifier different from "HPKE-v1". Particular attention needs to
 be paid if the KEM directly invokes functions that are used internally
 in HPKE's <code>Extract()</code> or <code>Expand()</code>, such as <code>Hash()</code> and <code>HMAC()</code> in the case of HKDF.
 It MUST be ensured that inputs to these invocations cannot collide with
 inputs to the internal invocations of these functions inside Extract or
 Expand. In HPKE's <code>KeySchedule()</code> this is avoided by using <code>Extract()</code> instead of
 <code>Hash()</code> on the arbitrary-length inputs <code>info</code> and <code>psk_id</code>.<a href="#section-8.5-2" class="pilcrow">¶</a></p>
-<p id="section-8.5-3">The string literal "HPKE-07" used in <code>LabeledExtract()</code> and <code>LabeledExpand()</code>
+<p id="section-8.5-3">The string literal "HPKE-v1" used in <code>LabeledExtract()</code> and <code>LabeledExpand()</code>
 ensures that any secrets derived in HPKE are bound to the scheme's name,
 even when possibly derived from the same Diffie-Hellman or KEM shared
 secret as in another scheme.<a href="#section-8.5-3" class="pilcrow">¶</a></p>
@@ -3038,7 +3047,7 @@ maximum possible value is 0xFFFF = 65535.<a href="#section-10.1-1" class="pilcro
           <li class="normal" id="section-10.1-3.8">Reference: Where this algorithm is defined<a href="#section-10.1-3.8" class="pilcrow">¶</a>
 </li>
         </ul>
-<p id="section-10.1-4">Initial contents: Provided in <a href="#kem-ids" class="xref">Section 7.1</a><a href="#section-10.1-4" class="pilcrow">¶</a></p>
+<p id="section-10.1-4">Initial contents: Provided in <a href="#kemid-values" class="xref">Table 2</a><a href="#section-10.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="kdf-identifiers">
@@ -3060,7 +3069,7 @@ possible value is 0xFFFF = 65535.<a href="#section-10.2-1" class="pilcrow">¶</a
           <li class="normal" id="section-10.2-3.4">Reference: Where this algorithm is defined<a href="#section-10.2-3.4" class="pilcrow">¶</a>
 </li>
         </ul>
-<p id="section-10.2-4">Initial contents: Provided in <a href="#kdf-ids" class="xref">Section 7.2</a><a href="#section-10.2-4" class="pilcrow">¶</a></p>
+<p id="section-10.2-4">Initial contents: Provided in <a href="#kdfid-values" class="xref">Table 3</a><a href="#section-10.2-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="aead-identifiers">
@@ -3084,7 +3093,7 @@ These are two-byte values, so the maximum possible value is 0xFFFF = 65535.<a hr
           <li class="normal" id="section-10.3-3.5">Reference: Where this algorithm is defined<a href="#section-10.3-3.5" class="pilcrow">¶</a>
 </li>
         </ul>
-<p id="section-10.3-4">Initial contents: Provided in <a href="#aead-ids" class="xref">Section 7.3</a><a href="#section-10.3-4" class="pilcrow">¶</a></p>
+<p id="section-10.3-4">Initial contents: Provided in <a href="#aeadid-values" class="xref">Table 5</a><a href="#section-10.3-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
