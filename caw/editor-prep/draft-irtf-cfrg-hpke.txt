@@ -426,8 +426,8 @@ Internet-Draft                    HPKE                     February 2021
 
    *  "DH(skX, pkY)": Perform a non-interactive Diffie-Hellman exchange
       using the private key "skX" and public key "pkY" to produce a
-      shared secret of length "Ndh".  This function can raise a
-      "ValidationError" as described in Section 7.1.4.
+      Diffie-Hellman shared secret of length "Ndh".  This function can
+      raise a "ValidationError" as described in Section 7.1.4.
 
    *  "Ndh": The length in bytes of a Diffie-Hellman shared secret
       produced by "DH()".
