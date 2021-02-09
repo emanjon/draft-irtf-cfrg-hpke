@@ -586,7 +586,7 @@ Internet-Draft                    HPKE                     February 2021
                          | mode_auth_psk | 0x03  |
                          +---------------+-------+
 
-                                  Table 1
+                            Table 1: HPKE Modes
 
    All these cases follow the same basic two-step pattern:
 
@@ -643,7 +643,7 @@ Internet-Draft                    HPKE                     February 2021
    context.  The key schedule inputs are as follows:
 
    *  "mode" - A one-byte value indicating the HPKE mode, defined in
-      Section 5 (Table 1).
+      Table 1.
 
    *  "shared_secret" - A KEM shared secret generated for this
       transaction.
@@ -694,11 +694,11 @@ Internet-Draft                    HPKE                     February 2021
    details.
 
    The HPKE algorithm identifiers, i.e., the KEM "kem_id", KDF "kdf_id",
-   and AEAD "aead_id" 2-byte code points as defined in Section 7.1,
-   Section 7.2, and Section 7.3, respectively, are assumed implicit from
-   the implementation and not passed as parameters.  The implicit
-   "suite_id" value used within "LabeledExtract" and "LabeledExpand" is
-   defined based on them as follows:
+   and AEAD "aead_id" 2-byte code points as defined in Table 2, Table 3,
+   and Table 5, respectively, are assumed implicit from the
+   implementation and not passed as parameters.  The implicit "suite_id"
+   value used within "LabeledExtract" and "LabeledExpand" is defined
+   based on them as follows:
 
    suite_id = concat(
      "HPKE",
@@ -1145,7 +1145,7 @@ Internet-Draft                    HPKE                     February 2021
    |       | HKDF-SHA512)  |         |    |   |   |    | [RFC5869]     |
    +-------+---------------+---------+----+---+---+----+---------------+
 
-                                  Table 2
+                              Table 2: KEM IDs
 
    The "Auth" column indicates if the KEM algorithm provides the
    "AuthEncap()"/"AuthDecap()" interface.  The meaning of all other
@@ -1331,7 +1331,7 @@ Internet-Draft                    HPKE                     February 2021
                 | 0x0003 | HKDF-SHA512 | 64  | [RFC5869] |
                 +--------+-------------+-----+-----------+
 
-                                 Table 3
+                             Table 3: KDF IDs
 
 
 
@@ -1370,7 +1370,7 @@ Internet-Draft                    HPKE                     February 2021
     | exporter_context | 2^{61} - 120 | 2^{125} - 200 | 2^{125} - 216 |
     +------------------+--------------+---------------+---------------+
 
-                                  Table 4
+                     Table 4: Application Input Limits
 
    This shows that the limits are only marginally smaller than the
    maximum input length of the underlying hash function; these limits
@@ -1422,7 +1422,7 @@ Internet-Draft                    HPKE                     February 2021
           | 0xFFFF | Export-only      | N/A | N/A | [[RFCXXXX]] |
           +--------+------------------+-----+-----+-------------+
 
-                                  Table 5
+                             Table 5: AEAD IDs
 
    The "0xFFFF" AEAD ID is reserved for applications which only use the
    Export interface; see Section 5.3 for more details.
@@ -1943,7 +1943,7 @@ Internet-Draft                    HPKE                     February 2021
 
    *  Reference: Where this algorithm is defined
 
-   Initial contents: Provided in Section 7.1
+   Initial contents: Provided in Table 2
 
 10.2.  KDF Identifiers
 
@@ -1968,7 +1968,7 @@ Internet-Draft                    HPKE                     February 2021
 
    *  Reference: Where this algorithm is defined
 
-   Initial contents: Provided in Section 7.2
+   Initial contents: Provided in Table 3
 
 10.3.  AEAD Identifiers
 
@@ -1989,7 +1989,7 @@ Internet-Draft                    HPKE                     February 2021
 
    *  Reference: Where this algorithm is defined
 
-   Initial contents: Provided in Section 7.3
+   Initial contents: Provided in Table 5
 
 11.  Acknowledgements
 
